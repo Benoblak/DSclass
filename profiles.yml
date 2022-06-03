@@ -1,0 +1,12 @@
+analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: house-analysis.cives7w7ur7w.ap-southeast-1.rds.amazonaws.com
+      user: soonlijian
+      password: Fpnz9zwg!
+      port: 5432
+      dbname: postgres
+      schema: public
+      threads: 4
