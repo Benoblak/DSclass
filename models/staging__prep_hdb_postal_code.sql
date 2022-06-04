@@ -9,7 +9,7 @@ select postal,
        road_name,
        building,
        address
-from hdb_postal_code
+from {{ref('core__hdb_postal_code')}}
 ),
 
 cte_drive as (
@@ -244,6 +244,19 @@ select postal,
        building,
        address
 from cte_street
-)
+),
 
-select * from cte_sth
+cte_final as (
+select postal,
+       latitude,
+       longtitude,
+       searchval,
+       blk_no,
+       original_road_name,
+       road_name,
+       building,
+       address
+from cte_central
+),
+
+select * from cte_final
