@@ -1,5 +1,5 @@
-analytics:
-  target: dev
+tsoon:
+  target: sandbox
   outputs:
     dev:
       type: postgres
@@ -8,5 +8,5 @@ analytics:
       password: Fpnz9zwg!
       port: 5432
       dbname: postgres
-      schema: public
+      schema: sandbox
       threads: 4
