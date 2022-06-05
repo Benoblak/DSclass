@@ -257,6 +257,6 @@ select postal,
        building,
        address
 from cte_central
-),
+)
 
 select * from cte_final
